@@ -20,6 +20,7 @@ class Article extends Model
 
     public function likes(): BelongsToMany
     {
+        // belongsToManyメソッドを用いて、ArticleモデルとUserモデルを、likesテーブルを通じた多対多の関係で結び付けています。
         return $this->belongsToMany('App\User', 'likes')->withTimestamps();
     }
 
